@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de suscripción</title>
+</head>
+<body>
+  <div class="contenedor_form">
+    <header class="header_form">
+      <h1>FORMULARIO DE SUSCRIPCIÓN</h1>
+      <div class="stepper">
+        <span class="step active">1</span>
+        <span class="step">2</span>
+        <span class="step">3</span>
+      </div>
+    </header>
+    <div class="acordeon">
+      <!-- Datos Personales -->
+      <div class="seccion_acordeon">
+        <h2>Datos personales <button>+</button></h2>
+        <form id="form_datos_personales">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Introduzca su nombre" required>
+          </div>
+
+          <div>
+            <label for="apellido">Apellido</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Introduzca su apellido" required>
+          </div>
+
+          <div>
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Introduzca su teléfono" required>
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="Introduzca su correo electrónico" required>
+          </div>
+
+          <button type="submit">Siguiente paso</button>
+        </form>
+      </div>
+
+      <!-- Datos de Envío -->
+      <div class="seccion_acordeon">
+        <h2>Datos de envío <button>+</button></h2>
+        <form id="form_datos_envio">
+          <div>
+            <label for="calle">Calle</label>
+            <input type="text" id="calle" name="calle" placeholder="Introduzca su calle" required>
+          </div>
+
+          <div>
+            <label for="ciudad">Ciudad</label>
+            <input type="text" id="ciudad" name="ciudad" placeholder="Introduzca su ciudad" required>
+          </div>
+
+          <div>
+            <label for="codigo-postal">Código postal</label>
+            <input type="text" id="codigo-postal" name="codigo-postal" placeholder="Introduzca su código postal" required>
+          </div>
+
+          <div>
+            <label for="provincia">Provincia</label>
+            <input type="text" id="provincia" name="provincia" placeholder="Introduzca su provincia" required>
+          </div>
+          <button type="submit">Volver</button>
+          <button type="submit">Siguiente paso</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
