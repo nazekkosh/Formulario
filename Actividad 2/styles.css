@@ -1,0 +1,265 @@
+/*estilos globales*/
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+}
+
+.contenedor_form {
+    width: 500px;
+    height: 394px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+/*header formulario*/
+.header_form {
+    background-color: #6E1FC3;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+/*stepper*/
+
+.stepper {
+    width: 95px;
+    display: flex;
+    justify-content: space-between;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: solid 1px #ffffff;
+}
+
+/*acordeon*/
+
+.acordeon {
+    position: relative;
+}
+
+.acordeon_header {
+    width: 100%;
+    height: 39px;
+    overflow: hidden;
+}
+
+.seccion_acordeon {
+    width: 438px;
+    height: 119px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 31px;
+    padding-right: 31px;
+
+}
+
+h2 {
+    width: 438px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 31px;
+    padding-right: 31px;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000;
+    border: solid 1px #E6E6E6;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+h2 button {
+    background-color: transparent;
+    border: none;
+}
+
+.acordeon_header form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+#f1 {
+    grid-column: 1/3;
+}
+
+#f1 input {
+    width: 420px;
+}
+
+#notas {
+    height: 63px;
+}
+
+#f2 {
+    grid-column: 1/3;
+}
+
+#f2 input {
+    width: 420px;
+}
+
+.form_group {
+    width: 204px;
+    height: 45px;
+}
+
+label {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+input {
+    padding-left: 15px;
+    width: 187px;
+    height: 26px;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 11px;
+    background-color: #F2F2F2;
+    border-radius: 10px;
+    border: none;
+}
+
+/*botones*/
+#volver {
+    position: absolute;
+    top: 340px;
+    left: 455px;
+    width: 61px;
+    height: 30px;
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-size: 11px;
+    color: #6E1FC3;
+    background-color: transparent;
+    border: solid 1px #6E1FC3;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+#enviar_formulario {
+    position: absolute;
+    top: 428px;
+    left: 515px;
+    width: 142px;
+    height: 30px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #6E1FC3;
+    border-radius: 10px;
+    border: none;
+    opacity: 0;
+}
+
+#siguiente_paso {
+    position: absolute;
+    top: 340px;
+    left: 535px;
+    width: 124px;
+    height: 30px;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #6E1FC3;
+    border-radius: 10px;
+    border: none;
+    opacity: 0;
+}
+
+/*para animar*/
+.step_active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    color: #6E1FC3;
+    border-radius: 100%;
+    border: solid 1px #ffffff;
+}
+
+.acordeon_header_active {
+    width: 100%;
+    height: 262px;
+}
+
+.acordeon_header_active h2 {
+    color: #6E1FC3;
+}
+
+.seccion_acordeon_active {
+    padding-left: 31px;
+    padding-right: 31px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.acordeon_header_active form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.acordeon_header_active {
+    width: 100%;
+    height: 352px;
+}
+
+.show_siguiente_paso {
+    opacity: 1;
+}
+
+.show_volver {
+    opacity: 1;
+}
+
+.contenedor_form_pago_active {
+    height: 482px;
+}
+
+.translate_volver_pago_active {
+    transform: translate(-18px, 88px);
+}
+
+.show_enviar_formulario {
+    opacity: 1;
+}
