@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de suscripción</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Gothic:wght@400;700;800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="contenedor_form">
+      <header class="header_form">
+        <h1>FORMULARIO DE COMPRA</h1>
+        <div class="stepper">
+          <button class="step">
+            <span class="visually-hidden">Step</span>
+            1
+          </button>
+          <button class="step">
+            <span class="visually-hidden">Step</span>
+            2
+          </button>
+          <button class="step">
+            <span class="visually-hidden">Step</span>
+            3
+          </button>
+        </div>
+      </header>
+      <div class="acordeon">
+        <!-- Datos Personales -->
+        <div class="acordeon_group">
+          <h2>
+            <button class="acordeon_trigger" id="personal-data-trigger">
+              Datos personales
+              <span class="acordeon_icon">
+                <i class="fa-solid"></i>
+              </span>
+            </button>
+          </h2>
+          <form
+            class="seccion_acordeon"
+            aria-labelledby="personal-data-trigger"
+          >
+            <div class="form_group">
+              <label for="nombre">Nombre</label>
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Introduzca su nombre"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="apellido">Apellido</label>
+              <input
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="Introduzca su apellido"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="telefono">Teléfono</label>
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Introduzca su teléfono"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="email">Correo electrónico</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Introduzca su correo electrónico"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Datos de envío -->
+        <div class="acordeon_group">
+          <h2>
+            <button class="acordeon_trigger" id="shipping-data-trigger">
+              Datos de envío
+              <i class="fa-solid"></i>
+            </button>
+          </h2>
+          <form class="seccion_acordeon">
+            <div class="form_group">
+              <label for="calle">Calle</label>
+              <input
+                type="text"
+                id="calle"
+                name="calle"
+                placeholder="Introduzca su calle"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="ciudad">Ciudad</label>
+              <input
+                type="text"
+                id="ciudad"
+                name="ciudad"
+                placeholder="Introduzca su ciudad"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="codigo-postal">Código postal</label>
+              <input
+                type="text"
+                id="codigo-postal"
+                name="codigo-postal"
+                placeholder="Introduzca su código postal"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="provincia">Provincia</label>
+              <input
+                type="text"
+                id="provincia"
+                name="provincia"
+                placeholder="Introduzca su provincia"
+                required
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Datos de pago -->
+        <div class="acordeon_group">
+          <h2>
+            <button class="acordeon_trigger" id="payment-data-trigger">
+              Datos de pago
+              <i class="fa-solid"></i>
+            </button>
+          </h2>
+          <form class="seccion_acordeon">
+            <div class="form_group">
+              <label for="numero-tarjeta">Número de tarjeta</label>
+              <input
+                type="text"
+                id="numero-tarjeta"
+                name="numero-tarjeta"
+                placeholder="Introduzca su número de tarjeta"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="fecha-vencimiento">Fecha de Vencimiento</label>
+              <input
+                type="month"
+                id="fecha-vencimiento"
+                name="fecha-vencimiento"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="CVV">CVV</label>
+              <input
+                type="number"
+                id="CVV"
+                name="CVV"
+                max="999"
+                placeholder="123"
+                required
+              />
+            </div>
+
+            <div class="form_group">
+              <label for="notas">Notas</label>
+              <textarea
+                id="notas"
+                name="notas"
+                placeholder="Introduzca alguna consideración adicional"
+                required
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="form-footer">
+        <button class="btn btn-border" id="volver">Volver</button>
+        <button class="btn btn-solid" id="siguiente_paso">
+          Siguiente paso
+        </button>
+        <input
+          class="btn btn-solid"
+          type="submit"
+          value="Enviar formulario"
+          id="enviar_form"
+          style="display: none"
+        />
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
