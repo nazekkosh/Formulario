@@ -60,6 +60,10 @@
                 placeholder="Introduzca su nombre"
                 required
               />
+              <span class="error-icon" id="error-nombre" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -71,6 +75,10 @@
                 placeholder="Introduzca su apellido"
                 required
               />
+              <span class="error-icon" id="error-apellido" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -80,8 +88,13 @@
                 id="telefono"
                 name="telefono"
                 placeholder="Introduzca su teléfono"
+                pattern="^\+?[0-9\s\-]{7,15}$"
                 required
               />
+              <span class="error-icon" id="error-telefono" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -93,6 +106,10 @@
                 placeholder="Introduzca su correo electrónico"
                 required
               />
+              <span class="error-icon" id="error-email" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
           </form>
         </div>
@@ -102,7 +119,9 @@
           <h2>
             <button class="acordeon_trigger" id="shipping-data-trigger">
               Datos de envío
-              <i class="fa-solid"></i>
+              <span class="acordeon_icon">
+                <i class="fa-solid"></i>
+              </span>
             </button>
           </h2>
           <form class="seccion_acordeon">
@@ -115,6 +134,10 @@
                 placeholder="Introduzca su calle"
                 required
               />
+              <span class="error-icon" id="error-calle" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -126,6 +149,10 @@
                 placeholder="Introduzca su ciudad"
                 required
               />
+              <span class="error-icon" id="error-ciudad" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -134,9 +161,14 @@
                 type="text"
                 id="codigo-postal"
                 name="codigo-postal"
+                pattern="^[0-9]+$"
                 placeholder="Introduzca su código postal"
                 required
               />
+              <span class="error-icon" id="error-codigo-postal" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -148,6 +180,10 @@
                 placeholder="Introduzca su provincia"
                 required
               />
+              <span class="error-icon" id="error-provincia" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
           </form>
         </div>
@@ -157,7 +193,9 @@
           <h2>
             <button class="acordeon_trigger" id="payment-data-trigger">
               Datos de pago
-              <i class="fa-solid"></i>
+              <span class="acordeon_icon">
+                <i class="fa-solid"></i>
+              </span>
             </button>
           </h2>
           <form class="seccion_acordeon">
@@ -170,6 +208,10 @@
                 placeholder="Introduzca su número de tarjeta"
                 required
               />
+              <span class="error-icon" id="error-numero-tarjeta" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -180,6 +222,10 @@
                 name="fecha-vencimiento"
                 required
               />
+              <span class="error-icon" id="error-fecha-vencimiento" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -192,6 +238,10 @@
                 placeholder="123"
                 required
               />
+              <span class="error-icon" id="error-CVV" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
 
             <div class="form_group">
@@ -202,6 +252,10 @@
                 placeholder="Introduzca alguna consideración adicional"
                 required
               ></textarea>
+              <span class="error-icon" id="error-notas" style="display: none;">
+                <i class="fa-solid fa-exclamation-circle"></i>
+                <span class="error-message">Campo incorrecto</span>
+              </span>
             </div>
           </form>
         </div>
@@ -222,5 +276,6 @@
       </div>
     </div>
     <script src="./script.js"></script>
+    <script src="./validacion.js"></script>
   </body>
 </html>

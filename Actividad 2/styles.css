@@ -7,6 +7,12 @@
   --primary-color: #6e1fc3;
   --white: #ffffff;
   --light-grey: #f2f2f2;
+  --fondo-input-hover: #dedede;
+  --error-red:red;
+  /* BEATRIZ*/
+  --tiempo-base: 300ms;
+	--escala-tiempo: 1;
+	--tiempo-transicion: calc(var(--tiempo-base)*var(--escala-tiempo));
 }
 
 button {
@@ -24,15 +30,7 @@ button {
   width: 1px;
 }
 
-input:focus,
-textarea:focus {
-  outline: 1px solid var(--primary-color);
-  box-shadow: 0px 0px 3px var(--primary-color);
-}
 
-textarea {
-  resize: none;
-}
 
 /* Estilo del cuerpo */
 body {
@@ -84,6 +82,9 @@ h1 {
   color: var(--white);
 }
 
+
+
+
 .step {
   display: flex;
   justify-content: center;
@@ -92,6 +93,7 @@ h1 {
   height: 1.5625rem;
   border-radius: 100%;
   border: solid 1px var(--white);
+  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, outline 0.4s ease-out;
 }
 
 .step-active {
@@ -102,6 +104,11 @@ h1 {
 .step:focus {
   outline: 1px solid var(--white);
   outline-offset: 2px;
+}
+
+/* Beatriz */
+.step:hover{
+  box-shadow: 0 0 7px 1px var(--white);
 }
 
 .step_active {
@@ -135,6 +142,7 @@ h1 {
   padding: 10px 31px;
 }
 
+
 .acordeon_trigger:focus {
   border: 1px solid var(--primary-color);
   box-shadow: 0px 0px 3px var(--primary-color);
@@ -161,6 +169,9 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+   /*BEATRIZ*/
+  padding: 0px 31px;
+  transition: all var(--tiempo-transicion) ease-out;
 }
 
 .active form {
@@ -204,7 +215,65 @@ h1 {
   background-color: #f2f2f2;
   border-radius: 10px;
   border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
 }
+
+.form_group input:focus,
+.form-group textarea:focus{
+  border: 1px solid transparent;
+}
+
+input:hover,
+textarea:hover{
+  background-color: var(--fondo-input-hover);
+}
+
+textarea {
+  resize: none;
+}
+
+/* correcto */
+input.valid, textarea.valid{
+  border: 1.5px solid var(--primary-color);
+  box-shadow:0 0 0 2px rgba(121, 0, 250, 0); 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input.valid:focus, textarea.valid:focus{
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(156, 75, 255, 0.415);
+}
+
+/* Incorrecto */
+input.error, textarea.error{
+  border:1px solid var(--error-red);
+  transition: border-color 0.27s ease-in-out, box-shadow 0.27s ease-in-out;
+}
+
+input.error:focus, textarea.error:focus{
+  border-color: var(--error-red);
+  box-shadow: 0 0 0 2.5px rgba(255, 0, 0, 0.2);
+}
+
+.error-icon{
+  color: var(--error-red);
+  margin-top: 2px;
+  margin-right: 5px;
+  font-size: 0.8rem;
+  display:none;
+}
+
+.error-icon i{
+  margin-right:5px;
+}
+
+.error-message {
+  font-size: 0.7rem;
+  color: var(--error-red);
+}
+
+
 
 /* Botones */
 .btn {
@@ -228,6 +297,11 @@ h1 {
   background-color: var(--primary-color);
   border-radius: 10px;
   border: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-solid:hover{
+  background-color: #5709aa;
 }
 
 .btn-solid:focus,
