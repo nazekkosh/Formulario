@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
         campo.setCustomValidity("El código postal no puede estar vacío");
         errorIcon.style.display = "inline-block";
       } else {
-        // Validación de que el valor solo contiene números (usando expresión regular)
         const codigoPostalPattern = /^\d{5}$/;
         if (!codigoPostalPattern.test(campo.value.trim())) {
           valido = false;
@@ -126,7 +125,6 @@ document.addEventListener("DOMContentLoaded", function () {
         campo.setCustomValidity("El número de tarjeta no puede estar vacío");
         errorIcon.style.display = "inline-block";
       } else {
-        // Validación de que el valor solo contiene números (usando expresión regular)
         const numeroTarjetaPattern = /^[0-9]+$/;
         if (!numeroTarjetaPattern.test(campo.value.trim())) {
           valido = false;
@@ -196,20 +194,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Validación al cambiar el valor de los campos (input)
   const campos = document.querySelectorAll("input, textarea");
   campos.forEach((campo) => {
-    // Validación cuando el campo pierde el foco (blur)
+  
     campo.addEventListener("blur", function () {
       validarCampo(campo);
     });
 
-    // Validación cuando el campo gana foco (focus)
     campo.addEventListener("focus", function () {
       validarCampo(campo);
     });
 
-    // Validación en tiempo real cuando el campo cambia de valor (input)
     campo.addEventListener("input", function () {
       validarCampo(campo);
     });
