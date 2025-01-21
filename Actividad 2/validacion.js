@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const errorIcon = document.getElementById(`error-${campo.id}`); // icono
 
     campo.classList.remove("valid");
-
     campo.classList.remove("error");
     errorIcon.style.display = "none"; // Ocultar el icono de error
 
@@ -214,8 +213,5 @@ document.addEventListener("DOMContentLoaded", function () {
     campo.addEventListener("input", function () {
       validarCampo(campo);
     });
-
-    
   });
-  
 });
