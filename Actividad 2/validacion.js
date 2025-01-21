@@ -11,13 +11,13 @@ document.addEventListener("DOMContentLoaded", function () {
     if (campo.id === "nombre" || campo.id === "apellido") {
       if (campo.value.trim() === "") {
         valido = false;
-        campo.classList.add("error"); // Añadir el borde rojo
+        campo.classList.add("error"); // Añade el borde rojo
         campo.setCustomValidity("Este campo no puede estar vacío");
-        errorIcon.style.display = "inline-block"; // Mostrar el icono de error
+        errorIcon.style.display = "inline-block";
       } else {
         campo.setCustomValidity("");
-        campo.classList.add("valid"); // Añadir la clase "valid" si es válido
-        errorIcon.style.display = "none"; // Ocultar el icono de error
+        campo.classList.add("valid"); // Añade la clase "valid" si es válido
+        errorIcon.style.display = "none"; 
       }
     }
 
