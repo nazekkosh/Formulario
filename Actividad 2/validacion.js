@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
           campo.setCustomValidity(
             "El código postal debe contener solo números"
           );
+          campo.classList.add("error");
           errorIcon.style.display = "inline-block";
         } else {
           campo.setCustomValidity("");
