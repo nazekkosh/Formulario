@@ -9,7 +9,7 @@
   --light-grey: #f2f2f2;
   --fondo-input-hover: #dedede;
   --error-red:red;
-  --tiempo-base: 300ms;
+  --tiempo-base: 400ms;
 	--escala-tiempo: 1;
 	--tiempo-transicion: calc(var(--tiempo-base)*var(--escala-tiempo));
 }
@@ -89,7 +89,7 @@ h1 {
   height: 1.5625rem;
   border-radius: 100%;
   border: solid 1px var(--white);
-  transition: box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, outline 0.4s ease-out;
+  transition: box-shadow 0.2s ease-in-out, background-color 0.3s ease-in-out, outline 0.4s ease-out;
 }
 
 .step-active {
@@ -165,7 +165,7 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   padding: 0px 31px;
-  transition: all var(--tiempo-transicion) ease-out;
+  transition: all var(--tiempo-transicion) ease;
 }
 
 .active form {
